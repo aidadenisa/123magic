@@ -10,7 +10,7 @@ module.exports = {
 
     entry: './app/main.ts',
     output: {
-        path: path.resolve(rootDir, './build'),
+        path: path.resolve(rootDir, './Aida123/build'),
         filename: 'app.bundle.js'
     },
     resolve: {
@@ -20,10 +20,11 @@ module.exports = {
         rules: [
             {
                 test: /\.ts$/,
+                exclude: '/node_modules/',
                 loaders: [
                     {
                         loader: 'awesome-typescript-loader',
-                        options: { configFileName: path.resolve(rootDir,'tsconfig.json') }
+                        options: { configFileName: path.resolve(rootDir,'./Aida123/tsconfig.json') }
                     } , 'angular2-template-loader'
                 ]
             },
@@ -49,7 +50,7 @@ module.exports = {
     ],
 
     devServer: {
-        contentBase: path.resolve(rootDir,'./build'),
+        contentBase: path.resolve(rootDir,'./Aida123/build'),
         port: 9000
     },
     devtool: 'source-map'
