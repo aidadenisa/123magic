@@ -7,12 +7,7 @@ const webpack = require('webpack');
 const rootDir = path.resolve(__dirname, '..');
 
 module.exports = {
-    debug: true,
-    devServer: {
-        contentBase: path.resolve(rootDir, 'build'),
-        port: 9000
-    },
-    devtool: 'source-map',
+
     entry: './app/main.ts',
     output: {
         path: './build',
@@ -27,12 +22,37 @@ module.exports = {
         rules: [
             {
                 test: /\.ts$/,
-                loader: 'awesome-typescript-loader'
+                loaders: [
+                    {
+                        loader: 'awesome-typescript-loader',
+                        options: { configFileName: path.resolve('tsconfig.json') }
+                    } , 'angular2-template-loader'
+                ]
             },
             {
                 test: /\.css$/,
                 loaders: 'style-loader!css-loader'
+            },
+            {
+                test: /\.html$/,
+                loader: 'html-loader'
+            },
+            {
+                test: /\.(png|jpe?g|gif|svg|woff|woff2|ttf|eot|ico)$/,
+                loader: 'file-loader?name=assets/[name].[hash].[ext]'
             }
         ]
-    }
+    },
+    plugins: [
+
+        new HtmlWebpackPlugin({
+            template: 'app/index.html'
+        })
+    ],
+    debug: true,
+    devServer: {
+        contentBase: path.resolve('./build'),
+        port: 9000
+    },
+    devtool: 'source-map'
 };
