@@ -1,0 +1,43 @@
+{
+  "name": "123project",
+  "version": "0.0.1",
+  "description": "project done for 123contactform",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "webpack-dev-server --config ./webpack.config.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@angular/common": "^4.2.6",
+    "@angular/compiler": "^4.2.6",
+    "@angular/core": "^4.2.6",
+    "@angular/platform-browser": "^4.2.6",
+    "@angular/platform-browser-dynamic": "^4.2.6",
+    "angular-2": "^1.0.0",
+    "es6-shim": "^0.35.3",
+    "reflect-metadata": "^0.1.10",
+    "rxjs": "^5.0.0-beta.6",
+    "zone.js": "^0.8.13"
+  },
+  "devDependencies": {
+    "@types/node": "^7.0.13",
+    "@types/source-map": "^0.5.0",
+    "@types/uglify-js": "^2.6.28",
+    "@types/webpack": "^2.2.15",
+    "awesome-typescript-loader": "^3.2.1",
+    "css-loader": "^0.28.4",
+    "html-webpack-plugin": "^2.29.0",
+    "lite-server": "^2.3.0",
+    "raw-loader": "^0.5.1",
+    "style-loader": "^0.18.2",
+    "ts-loader": "^2.2.2",
+    "ts-node": "~2.0.0",
+    "tslint": "~4.4.2",
+    "tslint-loader": "^3.5.3",
+    "typescript": "~2.0.0",
+    "webpack": "^3.2.0",
+    "webpack-dev-server": "^2.5.1"
+  }
+}
