@@ -1,6 +1,6 @@
 'use strict';
 
-const HtmlWebpack = require('html-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 const path = require('path');
 const webpack = require('webpack');
 
@@ -10,13 +10,11 @@ module.exports = {
 
     entry: './app/main.ts',
     output: {
-        path: './build',
+        path: path.resolve(rootDir, './build'),
         filename: 'app.bundle.js'
     },
     resolve: {
-        extensions: ['', '.js', '.ts'],
-        modulesDirectories: ['node_modules'],
-        root: path.resolve('.', 'app')
+        extensions: ['.js', '.ts']
     },
     module: {
         rules: [
@@ -25,7 +23,7 @@ module.exports = {
                 loaders: [
                     {
                         loader: 'awesome-typescript-loader',
-                        options: { configFileName: path.resolve('tsconfig.json') }
+                        options: { configFileName: path.resolve(rootDir,'tsconfig.json') }
                     } , 'angular2-template-loader'
                 ]
             },
@@ -49,9 +47,9 @@ module.exports = {
             template: 'app/index.html'
         })
     ],
-    debug: true,
+
     devServer: {
-        contentBase: path.resolve('./build'),
+        contentBase: path.resolve(rootDir,'./build'),
         port: 9000
     },
     devtool: 'source-map'
