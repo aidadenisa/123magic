@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack --progress",
     "start": "webpack-dev-server --config ./webpack.config.js"
   },
   "author": "",
@@ -17,9 +18,10 @@
     "@angular/platform-browser-dynamic": "^4.2.6",
     "angular-2": "^1.0.0",
     "es6-shim": "^0.35.3",
-    "reflect-metadata": "^0.1.10",
-    "rxjs": "^5.0.0-beta.6",
-    "zone.js": "^0.8.13"
+    "reflect-metadata": "^0.1.2",
+    "rxjs": "^5.0.0-beta.2",
+    "typescript": "^2.4.1",
+    "zone.js": "^0.6.6"
   },
   "devDependencies": {
     "@angular/forms": "^4.2.6",
@@ -41,6 +43,7 @@
     "tslint": "~4.4.2",
     "tslint-loader": "^3.5.3",
     "typescript": "~2.0.0",
+    "typings": "^2.1.1",
     "webpack": "^3.2.0",
     "webpack-dev-server": "^2.5.1"
   }
