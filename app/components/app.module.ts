@@ -8,6 +8,7 @@ import {LoginComponent} from "./login/login.component";
 import {FormsModule} from "@angular/forms";
 import {MdButtonModule} from '@angular/material';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {AuthenticationService} from "../services/authentication.service";
 
 @NgModule({
     declarations: [
@@ -22,7 +23,7 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
         MdButtonModule,
         BrowserAnimationsModule
     ],
-    providers: [],
+    providers: [AuthenticationService],
     bootstrap: [AppComponent]
 })
 export class AppModule { }
