@@ -1,1 +1,4 @@
-lista de componente
+<md-list *ngFor="let form of formList">
+    <md-list-item [routerLink]="['/form', form.id]"> {{ form.name }} </md-list-item>
+
+</md-list>

@@ -7,6 +7,7 @@ import {Form} from "../../models/form";
     styleUrls: ['form-list.component.css']
 })
 
+
 export class FormListComponent {
 
     private formList: Form[] = [];

@@ -24,4 +24,23 @@ export class RestService {
             );
     }
 
+    public getForm(formId:number) {
+
+        let currentUser = localStorage.getItem("currentUser");
+
+        return this.http.get("https://api.123contactform.com/v2/forms/" + formId + "?JWT=" + currentUser)
+            .map((res : Response) => {
+                let body = res.json();
+                if(body.statusCode === 200) {
+                    return(body.data);
+                }
+                else return body;
+
+            });
+
+
+
+
+    }
+
 }
