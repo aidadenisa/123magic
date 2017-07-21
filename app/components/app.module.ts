@@ -33,7 +33,7 @@ import {MdListModule} from '@angular/material';
         BrowserAnimationsModule,
         routes
     ],
-    providers: [AuthenticationService, RestService,ActivatedRoute],
+    providers: [AuthenticationService, RestService],
     bootstrap: [AppComponent]
 })
 export class AppModule { }

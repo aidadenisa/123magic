@@ -10,12 +10,12 @@ import {RestService} from "../../services/rest.service";
 
 export class FormComponent {
 
-    private form:Form;
+    private form:Form = null;
 
     constructor(private rest: RestService, private activatedRoute:ActivatedRoute){    }
 
     ngOnInit() {
-
+        // this.activatedRoute.d
         this.rest.getForm(this.activatedRoute.snapshot.params['id'])
             .subscribe(
                 data => {
