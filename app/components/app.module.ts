@@ -13,6 +13,7 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {AuthenticationService} from "../services/authentication.service";
 import {FormListComponent} from "./form-list/form-list.component";
 import {routes} from "./app.router";
+import {RestService} from "../services/rest.service";
 
 @NgModule({
     declarations: [
@@ -28,7 +29,7 @@ import {routes} from "./app.router";
         BrowserAnimationsModule,
         routes
     ],
-    providers: [AuthenticationService],
+    providers: [AuthenticationService, RestService],
     bootstrap: [AppComponent]
 })
 export class AppModule { }
