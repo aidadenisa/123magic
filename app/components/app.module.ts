@@ -9,11 +9,13 @@ import {FormsModule} from "@angular/forms";
 import {MdButtonModule} from '@angular/material';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {AuthenticationService} from "../services/authentication.service";
+import {FormListComponent} from "./form-list/form-list.component";
 
 @NgModule({
     declarations: [
         AppComponent,
-        LoginComponent
+        LoginComponent,
+        FormListComponent
     ],
     imports: [
         BrowserModule,
