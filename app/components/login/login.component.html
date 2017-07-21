@@ -8,7 +8,7 @@
         <label>Password</label>
         <input [(ngModel)]="user.pass" type="password" required/>
 
-        <button type="submit" md-raised-button (click)="login()">Log in</button>
+        <button type="submit" md-raised-button (click)="login()" routerLink="/form-list">Log in</button>
 
     </div>
 
