@@ -1,6 +1,7 @@
 import {Component} from "@angular/core";
 import {RestService} from "../../services/rest.service";
 import {Form} from "../../models/form";
+import {MdSnackBar} from "@angular/material";
 @Component({
     selector: 'form-list',
     templateUrl: 'form-list.component.html',
@@ -32,5 +33,6 @@ export class FormListComponent {
         );
 
     }
+
 
 }

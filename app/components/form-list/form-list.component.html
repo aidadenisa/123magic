@@ -1,4 +1,25 @@
-<md-list *ngFor="let form of formList">
-    <md-list-item [routerLink]="['form', form.id]"> {{ form.name }}</md-list-item>
+<h1>123AidaForm</h1>
 
-</md-list>
+<div class="row">
+    <div class="col col-md-8 col-sm-12">
+        <div class="row" >
+            <div *ngIf="formList">
+                <md-list  *ngFor="let form of formList">
+                    <!--<md-list-item [routerLink]="['form', form.id]">-->
+                    <md-list-item >
+                        <a href="http://www.123contactform.com/form-{{form.id}}/{{form.name.replace(' ','-')}}" target="_blank">{{ form.name }}</a>
+                    </md-list-item>
+
+                </md-list>
+            </div>
+        </div>
+    </div>
+
+    <div class="col col-md-4 col-sm-12">
+        <user-panel></user-panel>
+    </div>
+
+</div>
+
+
+
