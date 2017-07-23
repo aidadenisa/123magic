@@ -20,7 +20,7 @@ import 'jquery/dist/jquery.js'
 import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap/dist/js/bootstrap.js';
 import {UserPanelComponent} from "./userpanel/userpanel.component";
-
+import {MdChipsModule} from '@angular/material';
 @NgModule({
     declarations: [
         AppComponent,
@@ -39,6 +39,7 @@ import {UserPanelComponent} from "./userpanel/userpanel.component";
         MdProgressSpinnerModule,
         MdCardModule,
         MdSnackBarModule,
+        MdChipsModule,
         routes
     ],
     providers: [AuthenticationService, RestService],

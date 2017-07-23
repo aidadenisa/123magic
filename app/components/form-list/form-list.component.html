@@ -1,19 +1,29 @@
-<h1>123AidaForm</h1>
-
 <div class="row">
+
+
+
     <div class="col col-md-8 col-sm-12">
         <div class="row" >
-            <div *ngIf="formList">
-                <md-list  *ngFor="let form of formList">
-                    <!--<md-list-item [routerLink]="['form', form.id]">-->
-                    <md-list-item >
-                        <a href="http://www.123contactform.com/form-{{form.id}}/{{form.name.replace(' ','-')}}" target="_blank">{{ form.name }}</a>
-                    </md-list-item>
 
-                </md-list>
+            <div class="col col-12">
+                <div *ngIf="formList" class="card form-list-card">
+                    <div class="card-header">
+                        Your forms
+                    </div>
+                    <div class="card-block">
+                        <ul  *ngFor="let form of formList">
+                            <a class="list-group-item list-group-item-action" href="http://www.123contactform.com/form-{{form.id}}/{{form.name.replace(' ','-')}}" target="_blank">{{ form.name }}</a>
+                        </ul>
+                    </div>
+
+                </div>
             </div>
+
         </div>
     </div>
+
+
+
 
     <div class="col col-md-4 col-sm-12">
         <user-panel></user-panel>

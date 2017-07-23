@@ -2,3 +2,40 @@ body {
     background-color: #f9f9f9 !important;
     color:#212121!important;
 }
+
+.header {
+    background-color:#560027 !important;
+    border-bottom: 6px solid #bc477b;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 30px;
+    line-height: 40px;
+    text-align:center;
+    padding:25px;
+    color:white!important;
+}
+
+.footer-text {
+    text-align:center;
+}
+
+footer{
+    min-height:100px;
+    background-color:#BDBDBD;
+}
+.container-fluid {
+    min-height: 100%;
+    margin-bottom: -100px;
+}
+
+md-chip {
+    margin: auto;
+}
+.tags span {
+    background-color:#509556;
+    color: white;
+    padding:7px 15px;
+    border-radius: 7px;
+}
