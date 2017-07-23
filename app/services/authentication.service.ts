@@ -32,4 +32,21 @@ export class AuthenticationService {
     logout() {
         localStorage.removeItem("currentUser");
     }
+
+    getUserInfo(token:string){
+
+        return this.http.get("https://api.123contactform.com/v2/users?JWT=" + token)
+            .map((res:Response) => {
+            console.log(res);
+            let body = res.json();
+            if(body.statusCode === 200) {
+
+                return body.data;
+            }
+            else {
+                return body;
+            }
+            });
+
+    }
 }

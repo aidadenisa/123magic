@@ -1,0 +1,9 @@
+<div class="card">
+    <div class="card-header" *ngIf="user.name">
+        Account
+    </div>
+    <div class="card-block">
+        <h4>{{user.name}}</h4>
+        <button md-button (click)="logout()">Logout</button>
+    </div>
+</div>
