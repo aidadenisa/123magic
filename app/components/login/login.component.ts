@@ -2,6 +2,7 @@ import {Component} from "@angular/core";
 import {MdButtonModule} from '@angular/material';
 import {User} from "../../models/user";
 import {AuthenticationService} from "../../services/authentication.service";
+import {Router} from "@angular/router";
 
 @Component({
     selector: 'login',
@@ -14,8 +15,9 @@ export class LoginComponent {
 
     private user : User = { "mail" : "", "pass": ""};
     private currentUser: string = "";
+    private isValid:boolean = true;
 
-    constructor(private authenticationService: AuthenticationService) {
+    constructor(private authenticationService: AuthenticationService, private router: Router) {
 
     }
 
@@ -25,9 +27,13 @@ export class LoginComponent {
             .subscribe(
                 data => {
                     this.currentUser = JSON.parse(localStorage.getItem("currentUser")); //poate o sa imi foloseasca....
+                    this.router.navigateByUrl("/form-list");
                 },
                 error => {
                     console.log(error);
+                    this.isValid=false;
                 });
     }
+
+
 }

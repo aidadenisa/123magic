@@ -1,0 +1,23 @@
+.login-form .card{
+    padding:0px 30px;
+
+}
+
+h1 {
+    font-size: 30px;
+    line-height: 40px;
+    text-align:center;
+    padding-bottom:25px;
+    color:#880e4f !important;
+}
+
+.card-title {
+    border-bottom: 1px solid #80c683;
+    padding:10px 0px !important;
+    margin-bottom:25px!important;
+}
+
+button {
+    background-color: #880e4f !important;
+    color:white !important;
+}
