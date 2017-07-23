@@ -2,10 +2,6 @@ import {NgModule} from "@angular/core";
 import {BrowserModule} from "@angular/platform-browser";
 import {HttpModule} from "@angular/http";
 import {AppComponent} from "./app.component";
-
-//import {routes} from "./app.router"
-import {RouterModule, Routes, ActivatedRouteSnapshot, ActivatedRoute} from '@angular/router';
-
 import {LoginComponent} from "./login/login.component";
 import {FormsModule} from "@angular/forms";
 import {MdButtonModule} from '@angular/material';
@@ -16,13 +12,22 @@ import {routes} from "./app.router";
 import {RestService} from "../services/rest.service";
 import {FormComponent} from "./form/form.component";
 import {MdListModule} from '@angular/material';
+import {MdProgressSpinnerModule} from '@angular/material';
+import {MdCardModule} from '@angular/material';
+import {MdSnackBarModule} from '@angular/material';
+import 'jquery/dist/jquery.js'
+
+import 'bootstrap/dist/css/bootstrap.css';
+import 'bootstrap/dist/js/bootstrap.js';
+import {UserPanelComponent} from "./userpanel/userpanel.component";
 
 @NgModule({
     declarations: [
         AppComponent,
         LoginComponent,
         FormListComponent,
-        FormComponent
+        FormComponent,
+        UserPanelComponent
     ],
     imports: [
         BrowserModule,
@@ -31,6 +36,9 @@ import {MdListModule} from '@angular/material';
         MdButtonModule,
         MdListModule,
         BrowserAnimationsModule,
+        MdProgressSpinnerModule,
+        MdCardModule,
+        MdSnackBarModule,
         routes
     ],
     providers: [AuthenticationService, RestService],
