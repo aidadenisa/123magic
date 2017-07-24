@@ -7,3 +7,18 @@
 ul {
     margin-bottom: 0px !important;
 }
+
+.form-check-input {
+    width:15px;
+    height:15px;
+    margin:auto;
+
+
+}
+
+.everyrow {
+    display:flex;
+    flex-direction: row;
+    justify-content:center;
+    align-items: center;
+}

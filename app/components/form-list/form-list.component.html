@@ -6,20 +6,36 @@
         <div class="row" >
 
             <div class="col col-12">
-                <div *ngIf="formList" class="card form-list-card">
+                <div *ngIf="formList" class="card row form-list-card">
                     <div class="card-header">
                         Your forms
                     </div>
                     <div class="card-block">
                         <ul  *ngFor="let form of formList">
-                            <a class="list-group-item list-group-item-action" href="http://www.123contactform.com/form-{{form.id}}/{{form.name.replace(' ','-')}}" target="_blank">{{ form.name }}</a>
+                            <div class="row everyrow">
+                                <div class="col-1">
+                                    <input class="form-check-input" type="checkbox" [(ngModel)]="options[form.id]"/>
+                                </div>
+                                <div class="col-11">
+                                    <a class="list-group-item list-group-item-action" href="http://www.123contactform.com/form-{{form.id}}/{{form.name.replace(' ','-')}}" target="_blank">{{ form.name }}</a>
+                                </div>
+                            </div>
                         </ul>
+
+                    </div>
+                    <div class="form-group row ">
+                        <div class="col-12 offset-1">
+                            <button class="btn col-10" type="submit" md-raised-button (click)="deleteForms()" > Delete selected forms </button>
+
+                        </div>
+
                     </div>
 
                 </div>
             </div>
 
         </div>
+
     </div>
 
 

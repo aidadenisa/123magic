@@ -37,10 +37,29 @@ export class RestService {
                 else return body;
 
             });
+    }
 
+    public deleteForms(options:any[]){
 
+        let currentUser = localStorage.getItem("currentUser");
+        let buffer:string = "";
+        for(let id of options) {
+            buffer = buffer + id + "%2C";
+        }
 
+        buffer = buffer.substr(0,buffer.length - 3);
 
+        console.log("https://api.123contactform.com/v2/forms/bulk?JWT=" + currentUser + "&form_ids=" + buffer);
+
+        return this.http.delete("https://api.123contactform.com/v2/forms/bulk?JWT=" + currentUser + "&form_ids=" + buffer)
+            .map((res:Response) => {
+                let body = res.json();
+                if(body.statusCode === 200) {
+                    return body.message;
+                }
+                else body;
+
+            });
     }
 
 }
