@@ -24,6 +24,7 @@ h1 {
 footer{
     min-height:100px;
     background-color:#BDBDBD;
+    padding-bottom: 30px;
 }
 .container-fluid {
     min-height: 100%;
@@ -38,4 +39,14 @@ md-chip {
     color: white;
     padding:7px 15px;
     border-radius: 7px;
+}
+
+footer .justify-content-center .tags {
+    margin-top:20px !important;
+}
+
+.footer-text p {
+    margin-top: 20px;
+    color: #3e4a4a;
+
 }
