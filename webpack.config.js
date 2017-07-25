@@ -28,10 +28,10 @@ module.exports = {
                     // 'postcss-loader'
                 ]
             },
-            // {
-            //     test: /\.scss$/,
-            //     use: ['style-loader', 'css-loader', 'postcss-loader', 'sass-loader']
-            // },
+            {
+                test: /\.scss$/,
+                use: ['style-loader', 'css-loader', 'sass-loader']
+            },
             // {
             //     test: /bootstrap\/dist\/js\/umd\//, use: 'imports-loader?jQuery=jquery'
             // },
