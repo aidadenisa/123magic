@@ -2,6 +2,7 @@
 
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 var webpack = require('webpack');
+// require('bootstrap-loader');
 
 module.exports = {
 
@@ -24,8 +25,16 @@ module.exports = {
                     'to-string-loader',
                     'style-loader',
                     'css-loader'
+                    // 'postcss-loader'
                 ]
             },
+            // {
+            //     test: /\.scss$/,
+            //     use: ['style-loader', 'css-loader', 'postcss-loader', 'sass-loader']
+            // },
+            // {
+            //     test: /bootstrap\/dist\/js\/umd\//, use: 'imports-loader?jQuery=jquery'
+            // },
             {
                 test: /\.html$/,
                 loader: 'raw-loader'
@@ -43,8 +52,20 @@ module.exports = {
 
         new HtmlWebpackPlugin({
             template: './app/index.html'
-        })
-    ],
+        }),
+
+        // new webpack.ProvidePlugin({ // inject ES5 modules as global vars
+        //     $: 'jquery',
+        //     jQuery: 'jquery',
+        //     'window.jQuery': 'jquery',
+        //     Tether: 'tether'
+        // }),
+        // new webpack.LoaderOptionsPlugin({
+        //     postcss: [autoprefixer],
+        // }),
+
+
+    ]
 
 
 };
